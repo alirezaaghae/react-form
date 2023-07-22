@@ -1,0 +1,40 @@
+.form{}
+.form .textInput{    
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    color: #353535;
+    margin: 2px;
+    padding: 5px 20px;
+}
+.form .submitInput{
+    background: #34b277;
+    border: 1px solid #047440;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+ul{background: inherit;}
+ul li{list-style: none;text-align: center;background-color: inherit !important;}
+.table{}
+.table .liead-dark{background-color: rgb(51, 178, 119);}
+.table .liead-dark li{color: rgb(252, 252, 252);}
+
+.btns{ background-color: rgb(172, 171, 171); position: relative;}
+
+.btns .btn{cursor: pointer; }
+
+.btns .btn.remove{
+    color: white;
+    background-color: #ff3636;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.btns .btn.edit{
+    color: white;
+    background-color: #34b277;
+    border-radius: 10px;
+}
