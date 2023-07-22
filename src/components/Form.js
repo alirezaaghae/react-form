@@ -3,7 +3,9 @@ import { useState } from "react";
 const Form = (props) => {
     const [editMode, setEditMode] = useState(false);
     const [inputs, setInputs] = useState({});
-    props.setInput && setInputs(props.setInput) && setEditMode(true) ;
+    // console.log(props.setInput);
+    props.setInput && setInputs(props.setInput);
+    props.setInput && setEditMode(true);
     
     const handleChange = (event) => {
         const name = event.target.name;

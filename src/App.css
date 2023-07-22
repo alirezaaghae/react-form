@@ -1,4 +1,13 @@
-.form{}
+h1{font-family: Courier, monospace;font-weight: bold;color:white !important; text-align: center;font-size: 30px !important;}
+.title{background-color: #353535;padding: 10px;}
+.main{display: flex;flex-direction:row-reverse;}
+section{}
+section:nth-child(1){width: 30%;}
+section:nth-child(2){width: 70%;}
+
+
+
+.form{margin-bottom: 20px;padding: 20px;display: flex; flex-direction: column;background-color: #353535;border-radius: 0 0 10px 10px;}
 .form .textInput{    
     border: 1px solid #b3b3b3;
     border-radius: 3px;
@@ -15,7 +24,10 @@
 }
 
 ul{background: inherit;}
-ul li{list-style: none;text-align: center;background-color: inherit !important;}
+.ullist{width: 100%;display: flex;flex-direction:row-reverse; }
+ul li{list-style: none;text-align: center;background-color: inherit !important;font-size: 15px;    display: flex;
+    align-items: center;
+    justify-content: center;}
 .table{}
 .table .liead-dark{background-color: rgb(51, 178, 119);}
 .table .liead-dark li{color: rgb(252, 252, 252);}
@@ -24,17 +36,19 @@ ul li{list-style: none;text-align: center;background-color: inherit !important;}
 
 .btns .btn{cursor: pointer; }
 
-.btns .btn.remove{
+.btns .btnn.remove{
     color: white;
     background-color: #ff3636;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 10px;
     margin-left: 5px;
 }
 
-.btns .btn.edit{
+.btns .btnn.edit{
     color: white;
     background-color: #34b277;
+    width: 35px;
+    height: 35px;
     border-radius: 10px;
 }
