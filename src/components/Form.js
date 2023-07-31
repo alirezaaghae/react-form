@@ -3,9 +3,8 @@ import { useState } from "react";
 const Form = (props) => {
     const [editMode, setEditMode] = useState(false);
     const [inputs, setInputs] = useState({});
-    // console.log(props.setInput);
-    props.setInput && setInputs(props.setInput);
-    props.setInput && setEditMode(true);
+ 
+    console.log(Object.keys(props.edit));
     
     const handleChange = (event) => {
         const name = event.target.name;
@@ -30,7 +29,7 @@ const Form = (props) => {
             <input className="textInput" type="text" name="family" value={inputs.family || ""} onChange={handleChange} placeholder="instert Family ..." />
             <input className="textInput" type="text" name="id" value={inputs.id || ""} onChange={handleChange} placeholder="instert Id ..." />
             <input className="textInput" type="text" name="score" value={inputs.score || ""} onChange={handleChange} placeholder="instert Score ..." />
-            { editMode ? (<input className="submitInput" type="submit" value="Edit"/>) : (<input className="submitInput" type="submit" value="Send Request"/>) }
+            { Object.keys(props.edit).length? (<input className="submitInput" type="submit" value="update"/>) : (<input className="submitInput" type="submit" value="Send Request"/>) }
             
           </form>
       </>

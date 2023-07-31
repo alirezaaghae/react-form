@@ -1,17 +1,10 @@
-import { useState } from "react";
 
-const Table = (props) => {
+const Table = ({data , deleteRow , editRow}) => {
 
-  const editItem = (key) => {
-    // props.setEdit(true);
-    props.setObjEdit(props.L[key]);
-    console.log(props.L[key]);
-  }
   const removeItem = (key) => {
-    props.L.splice(key, 1);
-    props.setL(props.L);
-    console.log(props.L);
+    deleteRow(key);
   }
+ 
     
     return (
       <>
@@ -28,7 +21,7 @@ const Table = (props) => {
         </div>
         <div>
         {
-        props.L && props.L.map((item , key)=>
+        data  && data.map((item , key)=>
             <ul key={key} className="ullist">
                 <li className="col num">{key}</li>
                 <li className="col name">{item.name}</li>
@@ -36,7 +29,7 @@ const Table = (props) => {
                 <li className="col id">{item.id}</li>
                 <li className="col score">{item.score}</li>
                 {/* <li className="col btns"><button onClick={() => {editItem(key)}} className="edit btn">edit</button><button onClick={() => {removeItem(key)}} className="remove btn">X</button></li> */}
-                <li className="col btns"><button onClick={() => {editItem(key)}} className="edit btnn">✑</button><button onClick={() => {removeItem(key)}} className="remove btnn">␡</button></li>
+                <li className="col btns"><button onClick={() => {editRow(key)}} className="edit btnn">✑</button><button onClick={() => {removeItem(key)}} className="remove btnn">␡</button></li>
             </ul>
             
          )
