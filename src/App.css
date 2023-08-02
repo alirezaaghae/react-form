@@ -4,7 +4,7 @@ h1{font-family: Courier, monospace;font-weight: bold;color:white !important; tex
 section{}
 section:nth-child(1){width: 30%;}
 section:nth-child(2){width: 70%;}
-
+html{background-color: #353535;}
 
 
 .form{margin-bottom: 20px;padding: 20px;display: flex; flex-direction: column;background-color: #353535;border-radius: 0 0 10px 10px;}
