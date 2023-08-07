@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 
 const Form = (props) => {
   const [state, setState] = useState(0);
-  const inputs = useRef({})
+  const inputs = useRef({name: '', family: '', id: '', score: ''});
   var editMode = Object.keys(props.edit).length ? true : false;
   if (editMode) {
     inputs.current = props.edit;
@@ -12,9 +12,12 @@ const Form = (props) => {
     const name = event.target.name;
     const value = event.target.value;
     if (editMode){
+      
       Object.keys(inputs.current).forEach(function(key, index) {
-        if ( key === name){
+        console.log('key : '+key+' - name : '+name);
+        if (key == name){
           inputs.current[key] = value;
+          console.log('new key : '+key+' - name : '+name);
         }
       });
       setState(state+1)
@@ -31,7 +34,7 @@ const Form = (props) => {
     reset()
   }
   const reset = () => {
-    inputs.current = {}
+    inputs.current = {name: '', family: '', id: '', score: ''}
     props.setEdit({});
     editMode = false;
   }

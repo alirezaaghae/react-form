@@ -8,27 +8,27 @@ const App = () => {
   var isDupplicate = false;
   const [listEdit, setListEdit] = useState({});
   const [list, setList] = useState([
-    {
-      name: 'Alireza',
-      family: 'aghaei',
-      id: '0019924992',
-      score: '20'
-    }, {
-      name: 'Mohadese',
-      family: 'keramati',
-      id: '003232323',
-      score: '18'
-    }, {
-      name: 'maryam',
-      family: 'hajipoor',
-      id: '0293029382',
-      score: '15'
-    }, {
-      name: 'reza',
-      family: 'sadafi',
-      id: '273962423',
-      score: '12'
-    }
+    // {
+    //   name: 'Alireza',
+    //   family: 'aghaei',
+    //   id: '0019924992',
+    //   score: '20'
+    // }, {
+    //   name: 'Mohadese',
+    //   family: 'keramati',
+    //   id: '003232323',
+    //   score: '18'
+    // }, {
+    //   name: 'maryam',
+    //   family: 'hajipoor',
+    //   id: '0293029382',
+    //   score: '15'
+    // }, {
+    //   name: 'reza',
+    //   family: 'sadafi',
+    //   id: '273962423',
+    //   score: '12'
+    // }
   ]);
 
   const handleDeleteRow = (key) => {
